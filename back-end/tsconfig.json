@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es6"],
+    "lib": ["ES5","ES6"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
@@ -17,9 +17,12 @@
     "sourceMap": true,
     "strict": true,
     "strictPropertyInitialization": false,
-    "target": "es2019",
+    "target": "ES2017",
     "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
+  "exclude": ["build", "dist", "node_modules"],
   "include": ["src/**/*"],
-  "exclude": ["build", "node_modules"]
+  "ts-node": {
+    "files": true
+  }
 }
