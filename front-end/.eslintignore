@@ -1,0 +1,12 @@
+# Ignore artifacts:
+*.css
+.env
+.eslintc.json
+.eslintignore
+.prettierignore
+.prittierrc.json
+.vscode
+build
+coverage
+node_modules
+public
