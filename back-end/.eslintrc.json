@@ -19,7 +19,17 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": false
+      }
+    ],
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
   },
   "settings": {
     "import/resolver": {
