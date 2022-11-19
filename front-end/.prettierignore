@@ -1,12 +1,12 @@
 # Ignore artifacts:
-*.css
-.env
-.eslintc.json
-.eslintignore
-.prettierignore
-.prittierrc.json
-.vscode
 build
 coverage
-node_modules
-public
+
+# Ignore all HTML files:
+*.html
+*.css
+*.json
+**/.git
+**/.svn
+**/.hg
+**/node_modules
