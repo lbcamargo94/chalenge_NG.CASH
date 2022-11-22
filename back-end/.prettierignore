@@ -1,5 +1,6 @@
 # Ignore artifacts:
 build
+dist
 coverage
 
 # Ignore all HTML files:
@@ -9,4 +10,5 @@ coverage
 **/.git
 **/.svn
 **/.hg
+**/dist
 **/node_modules

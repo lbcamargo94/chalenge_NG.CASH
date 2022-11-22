@@ -5,6 +5,8 @@ const app: express.Express = express();
 
 app.use(express.json());
 
-app.use();
+app.get("/", (_req, res) => {
+  return res.json("Server OK!");
+});
 
 export { app };
