@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+# APPLICATION
+  frontend:
+    container_name: app_frontend
+    build: ./frontend
+    restart: "always"
+    platform: linux/x86_64
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+# SERVER
+  backend:
+    container_name: app_backend
+    build: ./backend
+    restart: "always"
+    platform: linux/x86_64
+    ports:
+      - 3001:3001
+    depends_on:
+      - database
+    environment:
+      - "SERVER_PORT=3001"
+      - "DB_USER=root"
+      - "DB_PASS=123456"
+      - "DB_HOST=db"
+      - "DB_NAME=api_ng_cash"
+      - "DB_PORT=5432"
+# DATABASE
+  database:
+    image: postgres:14
+    container_name: app_database
+    restart: "always"
+    platform: linux/x86_64
+    ports:
+      - 3002:5432
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123456"
